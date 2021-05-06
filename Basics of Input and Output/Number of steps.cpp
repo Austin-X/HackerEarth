@@ -21,10 +21,10 @@ int main() {
     }
   }
 
-  int ans = -1;
+	int ans = -1;
   for (int i = 0; i <= 5000; i ++) {
-    if (freq[i] == n) if (sum[i] < ans || ans == -1) ans = sum[i];
-  }
+    if (freq[i] == n && (sum[i] < ans || ans == -1)) ans = sum[i];
+	}
  
   cout << ans;
   return 0;
