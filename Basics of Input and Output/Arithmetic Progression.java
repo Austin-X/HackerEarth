@@ -8,18 +8,9 @@ public class ArithmeticProgression {
 		int T = readInt();
 		for (int t = 0; t < T; t ++) {
 			int a = readInt(), b = readInt(), c = readInt();
-			int ans = Integer.MAX_VALUE;
-			int diff = b - a;
-			ans = Math.min(ans, Math.abs(b + diff - c));
-			diff = c - b;
-			ans = Math.min(ans, Math.abs(b - diff - a));
-			diff = c - a;
-			if (diff % 2 != 0) {
-				int val1 = (diff - 1) / 2, val2 = (diff + 1) / 2;
-				ans = Math.min(ans, Math.min(1 + Math.abs(a + 1 + val1 - b), 1 + Math.abs(a - 1 + val2 - b)));
-			} else ans = Math.min(ans, Math.abs(a + diff / 2 - b));
-			
-			System.out.println(ans);
+			int val = Math.abs(2 * b - a - c);
+			if (val % 2 == 0) System.out.println(val / 2);
+			else System.out.println(val / 2 + 1);
 		}
 	}
 
