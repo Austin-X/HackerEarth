@@ -13,20 +13,19 @@ void print(int m, int maxLen[]) {
 
 void print2(int m, int maxLen[], string arr[]) {
   for (int i = 0; i < m; i ++) {
-			std::string::const_iterator it = arr[i].begin();
+      std::string::const_iterator it = arr[i].begin();
       while (it != arr[i].end() && std::isdigit(*it)) ++it;
       
-
-			if (it == arr[i].end()) {
-			  cout << "|";
-				for (int j = 0; j < maxLen[i] - arr[i].length() + 1; j ++) cout << " ";
-				cout << (arr[i] + " ");
-			} else {
-				cout << "| " + arr[i];
-				for (int j = 0; j < maxLen[i] - arr[i].length() + 1; j ++) cout << " ";
-			}
-		}
-		cout << "|\n";
+      if (it == arr[i].end()) {
+      cout << "|";
+      for (int j = 0; j < maxLen[i] - arr[i].length() + 1; j ++) cout << " ";
+      	cout << (arr[i] + " ");
+      } else {
+      	cout << "| " + arr[i];
+      for (int j = 0; j < maxLen[i] - arr[i].length() + 1; j ++) cout << " ";
+      }
+   }
+   cout << "|\n";
 }
 
 int main() {
@@ -48,12 +47,12 @@ int main() {
 
     string arr[n][m];
     for (int i = 0; i < n; i ++) {
-			for (int j = 0; j < m; j ++) {
-        cin >> arr[i][j];
-        int val = arr[i][j].size();
-        maxLen[j] = std::max(maxLen[j], val);
-			}
-		}
+	for (int j = 0; j < m; j ++) {
+            cin >> arr[i][j];
+            int val = arr[i][j].size();
+             maxLen[j] = std::max(maxLen[j], val);
+	}
+    }
     print(m, maxLen);
     print2(m, maxLen, attributes);
     print(m, maxLen);
