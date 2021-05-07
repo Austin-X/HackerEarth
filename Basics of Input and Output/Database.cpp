@@ -50,7 +50,7 @@ int main() {
 	for (int j = 0; j < m; j ++) {
             cin >> arr[i][j];
             int val = arr[i][j].size();
-             maxLen[j] = std::max(maxLen[j], val);
+            maxLen[j] = std::max(maxLen[j], val);
 	}
     }
     print(m, maxLen);
