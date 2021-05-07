@@ -17,12 +17,12 @@ void print2(int m, int maxLen[], string arr[]) {
       while (it != arr[i].end() && std::isdigit(*it)) ++it;
       
       if (it == arr[i].end()) {
-      cout << "|";
-      for (int j = 0; j < maxLen[i] - arr[i].length() + 1; j ++) cout << " ";
+        cout << "|";
+        for (int j = 0; j < maxLen[i] - arr[i].length() + 1; j ++) cout << " ";
       	cout << (arr[i] + " ");
       } else {
       	cout << "| " + arr[i];
-      for (int j = 0; j < maxLen[i] - arr[i].length() + 1; j ++) cout << " ";
+        for (int j = 0; j < maxLen[i] - arr[i].length() + 1; j ++) cout << " ";
       }
    }
    cout << "|\n";
