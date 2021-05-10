@@ -1,3 +1,3 @@
 # HackerEarth
 
-HackerEarth Code Solutions in Java
+HackerEarth Solutions
