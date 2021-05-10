@@ -1,3 +1,3 @@
 # HackerEarth
 
-HackerEarth Solutions
+My HackerEarth Solutions
