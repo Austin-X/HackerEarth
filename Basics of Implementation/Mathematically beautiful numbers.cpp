@@ -5,19 +5,19 @@ int main() {
   ios_base::sync_with_stdio(false);
   cin.tie(NULL);
 
-  int t;
+  int t, prev;
   long long x, k;
 
   cin >> t;
   while (t--) {
+    prev = -1;
     cin >> x >> k;
-    set<int> set;
-    while (x > 0) {
+    while (x) {
       int exp = 0;
       while (pow(k, exp) <= x) exp ++;
       if (pow(k, exp) > x) exp --;
-      if (set.count(exp)) break;
-      set.insert(exp);
+      if (exp == prev) break;
+      prev = exp;
       long long val = 1;
       for (int i = 0; i < exp; i ++) val *= k;
       x -= val;
